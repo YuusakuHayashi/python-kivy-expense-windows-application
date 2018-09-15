@@ -5,12 +5,15 @@ Config.set("graphics", "height", 480)
 
 from kivy.app import App
 from kivy.uix.screenmanager import ScreenManager, Screen
+#from widget.input_screen import InputScreen
 
 USER_ID = "test"
 PASSWORD = "test"
 ERROR_MESSAGE = "Login Error"
 
 sm = ScreenManager()
+#ips = InputScreen
+#ls = LoginScreen
 
 class LoginScreen(Screen):
     def loginButtonClicked(self):
@@ -20,6 +23,7 @@ class LoginScreen(Screen):
             sm.current = "input"
         else:
             self.ids["error_message"].text = ERROR_MESSAGE
+            
 class InputScreen(Screen):
     def clearButtonClicked(self):
         for key in self.ids:
@@ -32,10 +36,6 @@ class InputScreen(Screen):
         sentence += "\n"
         f.write(sentence)
         f.close()
-        #employeeID = self.ids["text_employeeID"].text
-        #dateofcost = self.ids["text_dateofcost"].text
-        #kindofcost = self.ids["text_kindofcost"].text
-        #valueofcost = self.ids["text_valueofcost"].text
             
 class ExpenseApp(App):
     def build(self):

@@ -1,0 +1,45 @@
+<InputScreen>:
+    BoxLayout:
+        orientation: "vertical"
+    	canvas.before:
+    	    Color:
+    	        rgba: 0.165, 0.184, 0.235, 1
+    	    Rectangle:
+    	        pos: self.pos
+    	        size: self.size
+    	Label:
+    	    size_hint_y: 0.15
+    	    text: "submit expense"
+    	    font_size: 32
+    	BoxLayout:
+    	    orientation: "vertical"
+    	    size_hint_y: 0.85 
+    	    PaddingBoxLayout:
+    	    	Label:
+    	    		text: "employee id" 
+    	    	TextInput:
+					id: "text_employeeID"
+    		PaddingBoxLayout:
+    		    Label:
+    		    	text: "date of cost"
+    		    TextInput:
+					id: "text_dateofcost"
+    		PaddingBoxLayout:
+    			Label:
+    			    text: "kind of cost"
+				TextInput:
+					id: "text_kindofcost"
+    		PaddingBoxLayout:
+    			Label:
+    			    text: "value of cost"
+				TextInput:
+					id: "text_valueofcost"
+    		PaddingBoxLayout:
+    		    Label:
+				BoxLayout
+    		    	Button:
+    		    		text: "Submit"
+						on_press: root.submitButtonClicked()
+					Button:
+						text: "Cancel"
+						on_press: root.clearButtonClicked()

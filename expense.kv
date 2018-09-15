@@ -1,3 +1,6 @@
+#:include force components\input_screen.kv
+#:include force components\login_screen.kv
+
 <TextInput>:
     multiline: False
     write_tab: False
@@ -7,89 +10,6 @@
     color: 0.6, 0.6, 0.6, 1
 <PaddingBoxLayout@BoxLayout>:
     padding: 20
-<InputScreen>:
-    BoxLayout:
-        orientation: "vertical"
-    	canvas.before:
-    	    Color:
-    	        rgba: 0.165, 0.184, 0.235, 1
-    	    Rectangle:
-    	        pos: self.pos
-    	        size: self.size
-    	Label:
-    	    size_hint_y: 0.15
-    	    text: "submit expense"
-    	    font_size: 32
-    	BoxLayout:
-    	    orientation: "vertical"
-    	    size_hint_y: 0.85 
-    	    PaddingBoxLayout:
-    	    	Label:
-    	    		text: "employee id" 
-    	    	TextInput:
-					id: "text_employeeID"
-    		PaddingBoxLayout:
-    		    Label:
-    		    	text: "date of cost"
-    		    TextInput:
-					id: "text_dateofcost"
-    		PaddingBoxLayout:
-    			Label:
-    			    text: "kind of cost"
-				TextInput:
-					id: "text_kindofcost"
-    		PaddingBoxLayout:
-    			Label:
-    			    text: "value of cost"
-				TextInput:
-					id: "text_valueofcost"
-    		PaddingBoxLayout:
-    		    Label:
-				BoxLayout
-    		    	Button:
-    		    		text: "Submit"
-						on_press: root.submitButtonClicked()
-					Button:
-						text: "Cancel"
-						on_press: root.clearButtonClicked()
-<LoginScreen>:
-    BoxLayout:
-        orientation: "vertical"
-    	canvas.before:
-    	    Color:
-    	        rgba: 0.165, 0.184, 0.235, 1
-    	    Rectangle:
-    	        pos: self.pos
-    	        size: self.size
-    	Label:
-    	    size_hint_y: 1.5 
-    	    text: "Login"
-    	    font_size: 32
-    	BoxLayout:
-    	    orientation: "vertical"
-    	    size_hint_y: 8.5 
-    	    PaddingBoxLayout:
-    	    	Label:
-    	    		text: "User"
-    	    	TextInput:
-					id: text_userID
-    		PaddingBoxLayout:
-    		    Label:
-    		    	text: "Password"
-    		    TextInput:
-					id: text_password
-    		    	password: True
-    		Label:
-				id: error_message
-    		    text: ""
-				color: 1, 0, 0, 1
-    		Label:
-    		    text: ""
-    		PaddingBoxLayout:
-    		    Label:
-    		    	text: ""
-    		    Button:
-    		    	text: "Login"
-					on_press: root.loginButtonClicked()
-				
-				
+<Root>:
+	InputScreen:
+	LoginScreen:
