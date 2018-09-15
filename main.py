@@ -4,16 +4,16 @@ Config.set("graphics", "width", 640)
 Config.set("graphics", "height", 480)
 
 from kivy.app import App
+from kivy.core.text import LabelBase, DEFAULT_FONT
 from kivy.uix.screenmanager import ScreenManager, Screen
-#from widget.input_screen import InputScreen
+
+LabelBase.register(DEFAULT_FONT, "ipaexg.ttf")
 
 USER_ID = "test"
 PASSWORD = "test"
-ERROR_MESSAGE = "Login Error"
+ERROR_MESSAGE = "ユーザ名またはパスワードが正しくありません"
 
 sm = ScreenManager()
-#ips = InputScreen
-#ls = LoginScreen
 
 class LoginScreen(Screen):
     def loginButtonClicked(self):

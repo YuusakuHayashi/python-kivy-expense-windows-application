@@ -9,19 +9,19 @@
     	        size: self.size
     	Label:
     	    size_hint_y: 1.5 
-    	    text: "Login"
+    	    text: "ログイン"
     	    font_size: 32
     	BoxLayout:
     	    orientation: "vertical"
     	    size_hint_y: 8.5 
     	    PaddingBoxLayout:
     	    	Label:
-    	    		text: "User"
+    	    		text: "ユーザ名"
     	    	TextInput:
 					id: text_userID
     		PaddingBoxLayout:
     		    Label:
-    		    	text: "Password"
+    		    	text: "パスワード"
     		    TextInput:
 					id: text_password
     		    	password: True
@@ -35,5 +35,5 @@
     		    Label:
     		    	text: ""
     		    Button:
-    		    	text: "Login"
+    		    	text: "ログイン"
 					on_press: root.loginButtonClicked()

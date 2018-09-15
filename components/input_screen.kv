@@ -9,37 +9,37 @@
     	        size: self.size
     	Label:
     	    size_hint_y: 0.15
-    	    text: "submit expense"
+    	    text: "経費申請"
     	    font_size: 32
     	BoxLayout:
     	    orientation: "vertical"
     	    size_hint_y: 0.85 
     	    PaddingBoxLayout:
     	    	Label:
-    	    		text: "employee id" 
+    	    		text: "社員番号" 
     	    	TextInput:
 					id: "text_employeeID"
     		PaddingBoxLayout:
     		    Label:
-    		    	text: "date of cost"
+    		    	text: "発生日"
     		    TextInput:
 					id: "text_dateofcost"
     		PaddingBoxLayout:
     			Label:
-    			    text: "kind of cost"
+    			    text: "種別"
 				TextInput:
 					id: "text_kindofcost"
     		PaddingBoxLayout:
     			Label:
-    			    text: "value of cost"
+    			    text: "金額"
 				TextInput:
 					id: "text_valueofcost"
     		PaddingBoxLayout:
     		    Label:
 				BoxLayout
     		    	Button:
-    		    		text: "Submit"
+    		    		text: "申請"
 						on_press: root.submitButtonClicked()
 					Button:
-						text: "Cancel"
+						text: "キャンセル"
 						on_press: root.clearButtonClicked()
