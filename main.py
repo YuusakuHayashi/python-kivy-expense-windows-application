@@ -27,17 +27,20 @@ class LoginScreen(Screen):
         else:
             self.ids["error_message"].text = ERROR_MESSAGE
 
-ok_f = datetime.now().strftime("%y%m%d%H%M%S") + ".txt"
 
 class InputScreen(Screen):
+    ok_f = datetime.now().strftime("%y%m%d%H%M%S") + ".txt"
+    u_err_flag = False 
+    k_err_flag = False
     def clearButtonClicked(self):
         for key in self.ids:
             self.ids[key].text = ""
+            u_err_flag = False
+            k_err_flag = False
     def submitButtonClicked(self):
         employeeID = self.ids["text_employeeID"].text
-        u_err_flag = False 
+        u_err_flag = False
         k_err_flag = False
-
         def fileWrite(title):
             f = open(title, "a", encoding="shift-jis")
             sentence = ""
@@ -59,7 +62,7 @@ class InputScreen(Screen):
                     fileWrite(k_err_file)
 
         if u_err_flag == False and k_err_flag == False:
-            fileWrite(ok_f)
+            fileWrite(self.ok_f)
 
         self.clearButtonClicked()
             
