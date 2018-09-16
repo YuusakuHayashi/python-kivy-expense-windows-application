@@ -39,6 +39,7 @@ class InputScreen(Screen):
             k_err_flag = False
     def submitButtonClicked(self):
         employeeID = self.ids["text_employeeID"].text
+        detail = self.ids["text_detail"].text
         u_err_flag = False
         k_err_flag = False
         def fileWrite(title):
@@ -56,6 +57,8 @@ class InputScreen(Screen):
                     u_err_flag = True 
                     u_err_file = datetime.now().strftime("%y%m%d%H%M%S")+".uerr.txt"
                     fileWrite(u_err_file)
+                elif detail == "":
+                    pass
                 else:
                     k_err_flag = True 
                     k_err_file = employeeID + ".kerr.txt"

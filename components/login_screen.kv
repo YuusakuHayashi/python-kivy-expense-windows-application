@@ -3,7 +3,7 @@
         orientation: "vertical"
     	canvas.before:
     	    Color:
-    	        rgba: 0.165, 0.184, 0.235, 1
+    	        rgba: 0.9, 0.9, 0.9, 1
     	    Rectangle:
     	        pos: self.pos
     	        size: self.size
@@ -18,11 +18,13 @@
     	    	Label:
     	    		text: "ユーザ名"
     	    	TextInput:
+		            font_size: 20
 					id: text_userID
     		PaddingBoxLayout:
     		    Label:
     		    	text: "パスワード"
     		    TextInput:
+		            font_size: 20
 					id: text_password
     		    	password: True
     		Label:
