@@ -10,6 +10,12 @@ from kivy.app import App
 from kivy.core.text import LabelBase, DEFAULT_FONT
 from kivy.uix.screenmanager import ScreenManager, Screen
 
+from kivy.resources import resource_add_path
+import sys
+
+if hasattr(sys, "_MEIPASS"):
+    resource_add_path(sys._MEIPASS)
+
 LabelBase.register(DEFAULT_FONT, "ipaexg.ttf")
 
 sm = ScreenManager()
@@ -39,7 +45,7 @@ class InputScreen(Screen):
             k_err_flag = False
     def submitButtonClicked(self):
         employeeID = self.ids["text_employeeID"].text
-        detail = self.ids["text_detail"].text
+        #detail = self.ids["text_detail"].text
         u_err_flag = False
         k_err_flag = False
         def fileWrite(title):
@@ -57,8 +63,8 @@ class InputScreen(Screen):
                     u_err_flag = True 
                     u_err_file = datetime.now().strftime("%y%m%d%H%M%S")+".uerr.txt"
                     fileWrite(u_err_file)
-                elif detail == "":
-                    pass
+                #elif detail == "":
+                #    pass
                 else:
                     k_err_flag = True 
                     k_err_file = employeeID + ".kerr.txt"
