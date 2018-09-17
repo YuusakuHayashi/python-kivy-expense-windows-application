@@ -2,3 +2,7 @@ test.kv
 __pycache__
 !IPA_Font_License_Agreement_v1.0.txt
 *.txt
+*.kerr.txt
+*.uerr.txt
+*.xlsm
+*.swp
