@@ -7,3 +7,7 @@ __pycache__
 *.xlsm
 *.swp
 build
+!dist/expense.exe
+dist
+!expense.spec
+*.spec

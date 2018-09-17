@@ -2,7 +2,6 @@
 from kivy.deps import sdl2, glew
 block_cipher = None
 
-
 a = Analysis(['main.py'],
              pathex=['C:\\Users\\yuusaku.hayashi\\project\\kivy_project\\python-kivy-expense-windows-application'],
              binaries=[],
